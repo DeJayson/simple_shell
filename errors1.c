@@ -37,7 +37,7 @@ int _erratoi(char *s)
  */
 void print_error(info_t *info, char *estr)
 {
-	_eputs(info->name);
+	_eputs(info->fname);
 	_eputs(":");
 	print_d(info->line_count, STDERR_FILENO);
 	_eputs(":");
@@ -130,7 +130,7 @@ void remove_comments(char *buf)
 {
 	int i;
 
-	for (i = 0; buf[i] != '\0; i++)
+	for (i = 0; buf[i] != '\0'; i++)
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 		{
 			buf[i] = '\0';
