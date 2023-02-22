@@ -48,7 +48,7 @@ int _mycd(info_t *info)
 		dir = _getenv(info, "HOME=");
 		if (!dir)
 			chdir_ret = /* TODO:what should this be? */
-				chdir((dir = _getenv(info, "PWD=")) ? dir : "\");
+				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
 	}
@@ -86,7 +86,7 @@ int _mycd(info_t *info)
  * constant function prototype
  * Return: Always 0
  */
-in _myhelp(info_t *info)
+int_myhelp(info_t *info)
 {
 	char **arg_array;
 
@@ -96,5 +96,3 @@ in _myhelp(info_t *info)
 		_puts(*arg_array); /*temp att_unused workaround */
 	return (0);
 }
-
-

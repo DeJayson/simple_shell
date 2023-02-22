@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		arr[0] = stkn;
 
 		i = 1;
-		while (stn != NULL)
+		while (stkn != NULL)
 		{
 			stkn = strtok(NULL, " \n");
 			arr[i] = stkn;
