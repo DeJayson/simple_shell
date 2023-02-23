@@ -82,14 +82,9 @@ int print_alias(list_t *node)
 
 /**
  * _myalias - mimics the alias builtin (man alias)
-<<<<<<< HEAD
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
-=======
- * @info: Structure containing potential arguments. Used to maintain constant function prototype
- * Return: Always 0
->>>>>>> 1ed58b36cec9e2ad8e9d810cf8bf6da433427983
  */
 int _myalias(info_t *info)
 {
@@ -115,9 +110,5 @@ int _myalias(info_t *info)
 		else
 			print_alias(node_starts_with(info->alias, info->argv[i], '='));
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 1ed58b36cec9e2ad8e9d810cf8bf6da433427983
 	return (0);
 }
